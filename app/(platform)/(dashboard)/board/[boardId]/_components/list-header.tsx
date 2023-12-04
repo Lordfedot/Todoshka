@@ -9,11 +9,14 @@ import { FormInput } from "@/components/form/form-input";
 import { useAction } from "@/hooks/use-action";
 import { updateList } from "@/actions/update-list";
 
+import { ListOptions } from "./list-options";
+
 type Props = {
   data: List;
+  onAddCard: () => void;
 };
 
-export const ListHeader = ({ data }: Props) => {
+export const ListHeader = ({ data, onAddCard }: Props) => {
   const [title, setTitle] = useState(data.title);
   const [isEditing, setIsEditing] = useState(false);
 
@@ -90,6 +93,7 @@ export const ListHeader = ({ data }: Props) => {
           {title}
         </div>
       )}
+      <ListOptions onAddCard={onAddCard} data={data} />
     </div>
   );
 };

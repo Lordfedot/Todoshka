@@ -15,7 +15,7 @@ import { FormSubmit } from "@/components/form/form-submit";
 import { useAction } from "@/hooks/use-action";
 import { Separator } from "@/components/ui/separator";
 import { deleteList } from "@/actions/delete-list";
-import { copyList } from "@/actions/copy-card";
+import { copyList } from "@/actions/copy-list";
 
 type Props = {
   data: List;
